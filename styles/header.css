@@ -1,0 +1,137 @@
+.cabecalho__menu-hamburguer {
+    width: 24px;
+    height: 24px;
+    background-image: url("../assets/Menu.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    display: inline-block;
+}
+
+.cabecalho {
+
+    background-color: var(--branco);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+}
+
+.container__imagem {
+    padding: 1em;
+}
+
+.lista__menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    width: 60vw;
+}
+
+.container__botao:checked ~ .lista__menu {
+    display: block;
+}
+
+.lista__menu__titulo, .lista__menu__item {
+    padding: 1em;
+    background-color: var(--branco);
+}
+
+.container__botao {
+    display: none;
+}
+
+.lista__menu__titulo {
+    color: var(--cor-titulos);
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.lista__menu-link {
+    color: var(--azul-degrade);
+    font-size: 1rem;
+    font-weight: 400;
+    -webkit-background-clip: text;
+    background-clip: text;
+    text-decoration: none;
+}
+
+.container__titulo {
+    display: none;
+}
+
+.opcoes {
+ 
+    display: none;
+}
+
+.container__texto {
+    display: none;
+}
+
+@media screen and (min-width: 1024px) {
+
+    .container__titulo, .container__titulo-negrito {
+        font-family: var(--fonte);
+        font-size: 30px;
+    }
+    .container__titulo {
+        display: block;
+        font-weight: 400;
+    }
+    .container__titulo-negrito {
+        font-weight: 700;
+    }
+    .opcoes {
+        display: flex;
+        gap: 1em;
+    }
+
+    .opcoes_item a {
+        text-decoration: none;
+        color: var(--cor-primaria);
+    }
+
+    .container__favoritos {
+        display: none;
+    }
+
+    .cabecalho__menu-hamburguer {
+        display: none;
+    }
+    .opcoes__botao:checked~.lista__menu {
+        display: block;
+        width: auto;
+    } 
+
+    .opcoes__botao {
+        display: none;
+    }
+
+}
+
+@media screen and (min-width: 1728px) {
+    .container__link {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: var(--cor-primaria);
+    }
+
+    .cabecalho {
+        padding: 0 1.5em;
+    }
+
+    .opcoes {
+        padding: 0 1em;
+        margin-right: auto;
+    }
+
+    .container__texto {
+        display: block;
+    }
+}
